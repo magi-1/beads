@@ -1,5 +1,4 @@
 # Beads-and-Leads
-[Audio Visualizer Using Matplotlib](https://nbviewer.jupyter.org/github/magi-1/Beads-and-Leads/blob/master/beads_leads.ipynb)
 
 In the above project I map frequency data to $[0, 2\pi]$ in order to steer a point in the plane based on the amplitude. I use the naming convention $beads$ and $leads$ to describe the two differnt kinds of data points I am working with. When you run the code you will see a lot of small points and 2 large ones, one color for each. These $beads$ (small) and $leads$ (large) are independent groups. Each group has 1 $lead$ and an arbitrary amount of beads. 
 
