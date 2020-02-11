@@ -8,7 +8,7 @@ Then after I have calculated a $leads$ new position, I calculate the distance fr
 
 Note that almost everything I have mentioned is scaled by some constant to make things look good and smooth, these can be instantiated in the parent class containing the paramaters. Also, in my syntax you might notice that I am a bit verbose when it comes to iterating over the intervals despite knowing I only am working with two in this particular version of the project i.e. range(len(self.intervals)). This is because in other versions of the project I have more than just two intervals. 
 
-That is about it. I'm currently in the process of adding inter-group interactions to make it more dynamic. 
+That is about it. I would like to add inter-group interactions to make it more dynamic but we will see about that.
 
 # Sources
 
