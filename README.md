@@ -6,11 +6,17 @@ In the above project I map frequency data to $[0, 2\pi]$ a fixed number of frequ
 
 In order to steer a $lead$, I take some arbitrary interval of frequencies and their respective amplitude, $[(f_0, a_0), ... , (f_n, a_n)]$, and map it to $[0, 2\pi]$ so that I have $[(f_0, a_0, 0), (f_0, a_0, \theta_1), ... , (f_0, a_0, \theta_{n-1}), (f_n, a_n, 2\pi)]$. For each frame of the animation, I caculating a rolling sum of radians and average them conditioned on the fact that the amplitude for a given frequency exceeds a chosen threshold. Say I have the interval $[0,500]$ Hz and at some time $t$ a pure note is being played at 250Hz, then I would add $\pi$ to my angle variable; as a result the $lead$ would move directly to the left. Specifically, $\theta_{\mu} = \frac{1}{n} \sum_{i=1}^{n}\theta_i$ and $f_{\mu} = \frac{1}{n} \sum_{i=1}^{n}f_i$ such that given it's old positions $x_0, y_0$. The new positions are
 
-$\begin{aligned}
-x0+f_{\mu}cos(\theta_{\mu}) \\ y0+f_{\mu}sin(\theta_{\mu}).
+$\begin{aligned}\begin{centering}
+x_1 = x0+f_{\mu}cos(\theta_{\mu}) 
+\end{centering}
 \end{aligned}
 $
-
+$\begin{aligned}\begin{centering}
+y_1 = y0+f_{\mu}sin(\theta_{\mu})
+\end{centering}
+\end{aligned}
+$
+ 
 Still for the same frame, after I have calculated a $leads$ new position, I calculate the distance from the $lead$ to every single $bead$ in the corresponding group and add the vector of distances, $\frac{1}{dist}$, to the vector containing the x,y-coordinates of the beads. 
 
 Note that almost everything I have mentioned is scaled by some constant to make things look smooth, these can be initialized in the parent class containing the paramaters. Also, in my syntax you might notice that I am a bit verbose when it comes to iterating over the intervals despite knowing I only am working with two in this particular version of the project i.e. range(len(self.intervals)). This is because in other versions of the project I have more than just two intervals. 
