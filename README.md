@@ -1,4 +1,6 @@
-# Beads-and-Leads
+# Beads
+
+Generative art using Fourier transform.
 
 Note that the video and music are out of sync slightly in the examples. This is due to me pushing my computer to the limit to process all of the data. If there were less points, it would run in real time. 
 
